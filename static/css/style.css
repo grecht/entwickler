@@ -1,51 +1,64 @@
+html { height: 100%; box-sizing: border-box; }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 body {
-  max-width: 800px;
-  margin: auto;
-  padding: 1em;
-  line-height: 1.5em;
+    position: relative;
+    line-height: 1.4;
+    padding: 0 10px 3rem 10px;
+    min-height: 100%;
+    margin: 0 auto;
 }
-
-/* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
-  text-decoration: none;
-  background: #eee;
-  padding: 5px;
-  border-radius: 5px;
+body, footer { max-width: 1000px; }
+footer {
+    margin: auto;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 10px 1rem 10px;
+    line-height: 1.2;
+    text-align: center;
 }
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
-hr {
-  border-style: dashed;
-  color: #ddd;
-}
-
-/* code */
+code { padding: 1px 3px; }
+code, pre { background: whitesmoke; }
 pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
-  padding: 1em;
-  overflow-x: auto;
+    overflow-x: auto;
+    padding: 8px 12px;
 }
-code { background: #f9f9f9; }
-pre code { background: none; }
-
-/* misc elements */
-img, iframe, video { max-width: 100%; }
+pre code { padding: initial; }
 main { hyphens: auto; }
 blockquote {
-  background: #f9f9f9;
-  border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
+    border-left: 3px solid lightgray;
+    padding: 1px 1em 1px;
 }
-
-table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
+hr { border: 1px solid lightgray; }
+img, iframe, video { max-width: 100%; }
+.title, h1, h2, h3, h4, h5 { line-height: 1; }
+.title, .listHeading { text-decoration: underline; }
+.title { margin: 0; }
+.article { 
+    max-width: 650px; 
+    margin: auto 0;
 }
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee }
+.menu { 
+    list-style-type: none;
+    padding: 0;  
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+.menu li { float: left; }
+.menu li.right { float: right; }
+@media screen and (max-width: 500px) { .menu li.right, .menu li { float: none; } }
+.menu a:hover:not(.active) { color: blue; }
+.menu a {
+    color: black; 
+    display: block;
+    padding: 2px 10px 2px 0;
+    font-size: larger;  
+    line-height: 1;    
+}

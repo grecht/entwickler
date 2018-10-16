@@ -1,12 +1,28 @@
 {{ partial "header.html" . }}
-<div class="article-meta">
-<h1><span class="title">{{ .Title }}</span></h1>
-{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-{{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
-</div>
 
-<main>
+{{ if .GetParam "hasMath"}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
+{{ end }}
+
+<main class="article">
+<h1 class="title">{{ .Title }}</h1>
+<p class="terms">
+    <b>{{ if (gt .Params.date 0) }}{{ .Date.Format "2006/01/02" }}{{ end }}</b>
+    {{ range $i := (slice "categories" "tags") }}
+    {{ with ($.Param $i) }}
+    | {{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }} 
+    {{ end }}
+    {{ end }}
+</p>
+
 {{ .Content }}
+
 </main>
+
+{{ if .GetParam "hasMath"}}
+  <script>renderMathInElement(document.body);</script>
+{{ end }}
 
 {{ partial "footer.html" . }}

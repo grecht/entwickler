@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{if not .IsHome }}
+        <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ end }}
+    {{if .IsHome }}
+        <title>{{ .Title }}</title>
+    {{ end }}
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
@@ -11,10 +16,13 @@
 
   <body>
     <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
+    <ul class="menu">      
+      <li><a href="/">Home</a></li>
+      <li><a href="/categories/">Categories</a></li>
+      <li><a href="/tags/">Tags</a></li>
+      <li><a href="/photographs/">Photographs</a></li>
+      <li class="right"><a href="/about">About</a></li>
     </ul>
-    <hr/>
     </nav>
+  </body>
+  <hr>
