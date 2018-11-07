@@ -11,10 +11,11 @@ body {
     min-height: 100%;
     margin: 0 auto;
 }
+.terms, body { font-family: -apple-system, BlinkMacSystemFont, 'Source Sans Pro', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+.terms { font-size: medium; }
 body, footer { max-width: 1000px; }
 footer {
     margin: auto;
-    background-color: white;
     position: absolute;
     left: 0;
     right: 0;
@@ -24,7 +25,11 @@ footer {
     text-align: center;
 }
 code { padding: 1px 3px; }
-code, pre { background: whitesmoke; }
+code, pre { background-color: whitesmoke; } 
+code {
+    font-family: "Source Code Pro", "Fira Mono", Monaco, Menlo, "Lucida Console", "Liberation Mono", monospace;
+    font-size: small;
+}
 pre {
     overflow-x: auto;
     padding: 8px 12px;
@@ -38,11 +43,14 @@ blockquote {
 hr { border: 1px solid lightgray; }
 img, iframe, video { max-width: 100%; }
 .title, h1, h2, h3, h4, h5 { line-height: 1; }
-.title, .listHeading { text-decoration: underline; }
-.title { margin: 0; }
-.article { 
-    max-width: 650px; 
-    margin: auto 0;
+.title { 
+    text-decoration: underline;
+    margin: 0; 
+}
+.article { max-width: 650px; }
+.article {
+    font-family: "Source Serif Pro", Georgia, "Bitstream Charter", "Droid Serif", "Liberation Serif", serif;
+    font-size: large; 
 }
 .menu { 
     list-style-type: none;
@@ -54,11 +62,17 @@ img, iframe, video { max-width: 100%; }
 .menu li { float: left; }
 .menu li.right { float: right; }
 @media screen and (max-width: 500px) { .menu li.right, .menu li { float: none; } }
-.menu a:hover:not(.active) { color: blue; }
+.menu a:hover { color: blue; }
 .menu a {
-    color: black; 
+    color: black;
     display: block;
     padding: 2px 10px 2px 0;
     font-size: larger;  
-    line-height: 1;    
+    line-height: 1;
+    background: transparent; 
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.date { background-color: lavender; }

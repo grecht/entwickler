@@ -9,12 +9,12 @@
 <main class="article">
 <h1 class="title">{{ .Title }}</h1>
 <p class="terms">
-    <b>{{ if (gt .Params.date 0) }}{{ .Date.Format "2006/01/02" }}{{ end }}</b>
-    {{ range $i := (slice "categories" "tags") }}
-    {{ with ($.Param $i) }}
-    | {{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }} 
-    {{ end }}
-    {{ end }}
+  <code class=date>{{ if (gt .Params.date 0) }}{{ .Date.Format "2006-01-02" }}{{ end }}</code>
+  {{ range $i := (slice "categories" "tags") }}
+  {{ with ($.Param $i) }}
+  | {{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }} 
+  {{ end }}
+  {{ end }}
 </p>
 
 {{ .Content }}
