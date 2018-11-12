@@ -6,10 +6,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/contrib/auto-render.min.js"></script>
 {{ end }}
 
-<main class="article">
+<article>
 <h1 class="title">{{ .Title }}</h1>
 <p class="terms">
-  <code class=date>{{ if (gt .Params.date 0) }}{{ .Date.Format "2006-01-02" }}{{ end }}</code>
+  {{ if (gt .Params.date 0) }}
+    <code class=date><time datetime="{{ .Date.Format "2006-01-02 15:04" }}">{{ .Date.Format "2006-01-02" }}</time></code>
+  {{ end }}
   {{ range $i := (slice "categories" "tags") }}
   {{ with ($.Param $i) }}
   | {{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }} 
@@ -19,7 +21,7 @@
 
 {{ .Content }}
 
-</main>
+</article>
 
 {{ if .GetParam "hasMath"}}
   <script>renderMathInElement(document.body);</script>

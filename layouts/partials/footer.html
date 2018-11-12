@@ -1,9 +1,9 @@
+  </body>
   <footer>
-  <hr style="margin-top: 0;">
+  <hr>
   {{ partial "foot_custom.html" . }}
   {{ with .Site.Params.footer }}
   {{ . | markdownify }}
   {{ end }} <a href="/index.xml">RSS Feed</a>
   </footer>  
-  </body>
 </html>

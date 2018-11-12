@@ -4,24 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{if not .IsHome }}
-        <title>{{ .Title }} | {{ .Site.Title }}</title>
+      <title>{{ .Title }} | {{ .Site.Title }}</title>
     {{ end }}
     {{if .IsHome }}
-        <title>{{ .Title }}</title>
+      <title>{{ .Title }}</title>
     {{ end }}
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
   </head>
 
-  <body>
-    <nav>
+  <nav>
     <ul class="menu">      
       <li><a href="/">Home</a></li>
       <li><a href="/categories/">Categories</a></li>
       <li><a href="/tags/">Tags</a></li>
       <li><a href="/photographs/">Photographs</a></li>
-      <li class="right"><a href="/about">About</a></li>
     </ul>
-    </nav>
-  </body>
-  <hr>
+  </nav>
+  <body>
