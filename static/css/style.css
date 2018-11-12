@@ -1,6 +1,7 @@
 html { 
     height: 100%; 
     box-sizing: border-box; 
+    overflow-y: scroll;
 }
 main { hyphens: auto; }
 *,
@@ -54,15 +55,14 @@ footer {
 }
 .menu { 
     list-style-type: none;
-    padding: 1px;  
+    padding: 10px;  
     overflow: hidden;
-    
 }
-.menu, .menu a {
-    background: black;
-    color: white; 
+.menu, .menu a { color: slategray; }
+.menu, footer, body { 
+    margin: 0 auto; 
+    max-width: 1000px; 
 }
-.menu, footer, body { margin: 0 auto; max-width: 1000px; }
 article, .list  { margin: 0.5em auto; }
 .menu li { float: left; }
 .menu li.right { float: right; }
@@ -72,9 +72,8 @@ article, .list  { margin: 0.5em auto; }
     font-size: larger;  
     line-height: 1;
     text-decoration: none;
-    border-right: 1px solid;
 }
-.menu a:hover { background: white; color: black; }
+.menu a:hover { color: black; }
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -85,7 +84,7 @@ article, .list  { margin: 0.5em auto; }
     .menu li.right, .menu li { float: none; } 
     .grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
 }
-.date { background-color: lavender; }
+.date { background-color: slategray; color: white; }
 article .grid { 
     width: 100vw;
     position: relative;
