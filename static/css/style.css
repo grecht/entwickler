@@ -15,12 +15,34 @@ body {
     padding: 0 10px 3rem 10px;
     min-height: 100%;
 }
-.terms, body { font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Source Sans Pro", Roboto, "Helvetica Neue", sans-serif; }
+.terms, body { 
+    font-family:    -apple-system, 
+                    system-ui, 
+                    BlinkMacSystemFont, 
+                    "Segoe UI", 
+                    Oxygen, 
+                    Cantarell, 
+                    Ubuntu, 
+                    "Fira Sans",
+                    Roboto, 
+                    "Droid Sans",
+                    "Helvetica Neue", 
+                    Arial, 
+                    sans-serif; 
+}
 .terms { font-size: medium; }
 code, pre { background-color: whitesmoke; } 
 code {
     padding: 1px 3px;
-    font-family: "SF Mono", "Segoe UI Mono", "Source Code Pro", "Fira Mono", "Roboto Mono", Menlo, Courier, monospace;
+    font-family:    "SF Mono", 
+                    Consolas,
+                    "Fira Mono", 
+                    "Roboto Mono", 
+                    "Source Code Pro",
+                    "Liberation Mono",
+                    Menlo, 
+                    Courier, 
+                    monospace;
     font-size: small;
 }
 pre {
@@ -40,9 +62,9 @@ img, iframe, video { max-width: 100%; }
     margin: 0; 
 }
 article { 
-    max-width: 600px; 
-    font-family: "Source Serif Pro", Georgia, "Bitstream Charter", "Droid Serif", "Liberation Serif", serif;
+    max-width: 600px;
     font-size: large;
+    
 }
 footer {
     position: absolute;
