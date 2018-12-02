@@ -30,7 +30,7 @@ body {
                     Arial, 
                     sans-serif; 
 }
-.terms { font-size: medium; }
+.terms { font-size: smaller; }
 code, pre { background-color: whitesmoke; } 
 code {
     padding: 1px 3px;
@@ -108,6 +108,7 @@ article, .list  { margin: 0.5em auto; }
 }
 .date { background-color: slategray; color: white; }
 article .grid { 
+    /* TODO: prevent overflow */
     width: 100vw;
     position: relative;
     left: 50%;

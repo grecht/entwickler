@@ -2,7 +2,9 @@
   <footer>
   {{ partial "foot_custom.html" . }}
   {{ with .Site.Params.footer }}
-  {{ . | markdownify }}
-  {{ end }} <a href="/index.xml">RSS Feed</a>
+    {{ . | markdownify }}
+  {{ end }} 
+  <a href="/index.xml">RSS Feed</a>
+  | Last update: {{ .Site.LastChange }}
   </footer>  
 </html>
