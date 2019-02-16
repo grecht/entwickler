@@ -17,7 +17,6 @@
   | {{ $i | title }}: {{ range $k := . }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a> {{ end }} 
   {{ end }}
   {{ end }}
-  | Last modification: {{ .Lastmod }}
 </p>
 
 {{ .Content }}
