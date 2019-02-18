@@ -2,6 +2,7 @@ html {
     height: 100%; 
     box-sizing: border-box; 
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 main { hyphens: auto; }
 *,
@@ -108,11 +109,6 @@ article, .list  { margin: 0.5em auto; }
 }
 .date { background-color: slategray; color: white; }
 article .grid { 
-    /* TODO: prevent overflow */
     width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: calc(-50vw + 50%);
 }
