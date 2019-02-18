@@ -99,13 +99,14 @@ article, .list  { margin: 0.5em auto; }
 .menu a:hover { color: black; }
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 /* Some improvements for smaller screens. */
-@media screen and (max-width: 800px) { .grid { grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); }}
+@media screen and (max-width: 800px) { .grid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }}
 @media screen and (max-width: 500px) { 
     .menu li.right, .menu li { float: none; } 
-    .grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 }
 .date { background-color: slategray; color: white; }
 article .grid { 
