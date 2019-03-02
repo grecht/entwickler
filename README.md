@@ -26,7 +26,7 @@ pygmentsStyle = "tango"
     description = "Gereon's Weblog."
     header =  ["[Home](/)", "[Photographs](/photographs/)"]
     header_right = ["[About](/about)"]
-    footer = "&#169; Gereon Recht | [Home](/) [Github](https://github.com/grecht) | "
+    footer = "&#169; Gereon Recht | [Github](https://github.com/grecht) | "
     email = "gereon@wblg.xyz"
 
 ```
