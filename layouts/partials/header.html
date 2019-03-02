@@ -14,12 +14,13 @@
   </head>
 
   <nav>
-    <ul class="menu">      
-      <li><a href="/">Home</a></li>
-      <li><a href="/categories/">Categories</a></li>
-      <li><a href="/tags/">Tags</a></li>
-      <li><a href="/photographs/">Photographs</a></li>
-      <li class="right"><a href="/about/">About</a></li>
+    <ul class="menu">
+      {{ range $i := .Site.Params.header }}
+        <li>{{ $i | markdownify }}</li>
+      {{ end }}   
+      {{ range $i := .Site.Params.header_right }}
+        <li class="right">{{ $i | markdownify }}</li>
+      {{ end }}      
     </ul>
   </nav>
   <body>
