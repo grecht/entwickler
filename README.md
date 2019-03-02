@@ -5,4 +5,28 @@ In your `themes` folder use `git submodule add git@github.com:grecht/entwickler.
 * `\\( MATH \\)` for inline mode
 * `$$ MATH $$` for display mode
 
-The menu entries are hardcoded into `header.html`.
+Example config file:
+
+```
+baseurl = "https://wblg.xyz/"
+languageCode = "en-us"
+title = "Gereon's Weblog"
+theme = "entwickler"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+enableGitInfo = true
+footnotereturnlinkcontents = "↩"
+pygmentsStyle = "tango"
+
+[permalinks]
+    post = "/post/:year/:month/:day/:slug/"
+    note = "/note/:year/:month/:day/:slug/"
+
+[params]
+    description = "Gereon's Weblog."
+    header =  ["[Home](/)", "[Photographs](/photographs/)"]
+    header_right = ["[About](/about)"]
+    footer = "&#169; Gereon Recht | [Home](/) [Github](https://github.com/grecht) | "
+    email = "gereon@wblg.xyz"
+
+```
