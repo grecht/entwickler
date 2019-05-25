@@ -7,7 +7,7 @@
 
 {{ range (where .Data.Pages "Section" "!=" "") }}
 <code class=date><time datetime="{{ .Date.Format "2006-01-02 15:04" }}">{{ .Date.Format "2006-01-02" }}</time></code>
-  ~ <a href="{{ .URL }}">{{ .Title }}</a>
+  ~ <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   <br>
 {{ end }}
 </div>

@@ -21,10 +21,10 @@ body {
                     system-ui, 
                     BlinkMacSystemFont, 
                     "Segoe UI", 
+                    "DejaVu Sans",
                     Oxygen, 
                     Cantarell, 
                     Ubuntu, 
-                    "Fira Sans",
                     Roboto, 
                     "Droid Sans",
                     "Helvetica Neue", 
@@ -35,13 +35,11 @@ body {
 code, pre { background-color: whitesmoke; } 
 code {
     padding: 1px 3px;
-    font-family:    "SF Mono", 
-                    Consolas,
-                    "Fira Mono", 
-                    "Roboto Mono", 
-                    "Source Code Pro",
+    font-family:    "DejaVu Sans Mono",
+                    "Menlo", 
+                    "SF Mono",
+                    "Consolas",
                     "Liberation Mono",
-                    Menlo, 
                     Courier, 
                     monospace;
     font-size: small;
@@ -63,9 +61,9 @@ img, iframe, video { max-width: 100%; }
     margin: 0; 
 }
 article { 
-    max-width: 700px;
-    font-size: large;
-    font-family: "Athelas", "Source Serif Pro", Georgia, "Bitstream Charter", "Droid Serif", "Liberation Serif", serif;
+    line-height: 1.5;
+    font-size: larger;
+    font-family: "Iowan", "DejaVu Serif", Georgia, "Droid Serif", serif;
 }
 footer {
     position: absolute;
@@ -82,16 +80,16 @@ footer {
     overflow: hidden;
 }
 .menu, .menu a { color: slategray; }
-.menu, footer, body { 
+.menu, footer, body, article { 
     margin: 0 auto; 
-    max-width: 1000px; 
+    max-width: 800px; 
 }
 article, .list  { margin: 0.5em auto; }
 .menu li { float: left; }
 .menu li.right { float: right; }
 .menu a {
     display: block;
-    padding: 2px 10px;
+    padding: 5px 10px;
     font-size: larger;  
     line-height: 1;
     text-decoration: none;
