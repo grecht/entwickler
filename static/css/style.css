@@ -32,7 +32,6 @@ body {
                     sans-serif; 
 }
 .terms { font-size: smaller; }
-code, pre { background-color: whitesmoke; } 
 code {
     padding: 1px 3px;
     font-family:    "DejaVu Sans Mono",
@@ -47,6 +46,7 @@ code {
 pre {
     overflow-x: auto;
     padding: 8px 12px;
+    border: 1px solid lightgray;
 }
 pre code { padding: initial; }
 blockquote {
